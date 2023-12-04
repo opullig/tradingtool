@@ -14,29 +14,29 @@
     <form class="form" id="stocks">
         
         <div class="form-group">
-            <label for="data">Data</label>
+            <label for="data">Date</label>
             <input type="date" id="data" class="form-control" required autofocus/>        
         </div>    
         
         <div class="form-group">
-            <label for="quantity">Quantidade</label>
+            <label for="quantity">Quantity</label>
             <input type="number" min="1" step="1" id="quantity" class="form-control" value="1" required/>
         </div>
         
         <div class="form-group">
-            <label for="price">Valor</label>
+            <label for="price">Price</label>
             <input id="price" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
         </div>
         
-        <button class="btn btn-primary"  type="button">Incluir</button>
+        <button class="btn btn-primary"  type="button">Isert</button>
     </form>
     
     <div class="text-center">
         <button id="botao-importa" class="btn btn-primary text-center" type="button">
-            Importar Negociações
+            Import Trade
         </button>
         <button id="botao-apaga" class="btn btn-primary text-center" type="button">
-            Apagar
+            Clear
         </button>
     </div> 
     <br>
@@ -45,7 +45,7 @@
     <table class="table table-hover table-bordered">
         <thead>
             <tr>
-                <th>Data</th>
+                <th>Date</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Amount</th>
@@ -58,6 +58,10 @@
         <tfoot>
         </tfoot>
     </table>
-    <script src="app/models/trading.js"></script>
+    <script src="app/models/trading/Trading.js"></script>
+    <script>
+        let n1 = new Trading();
+        console.log(n1);
+    </script>
 </body>
 </html>
