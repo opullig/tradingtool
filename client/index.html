@@ -60,8 +60,16 @@
     </table>
     <script src="app/models/trading/Trading.js"></script>
     <script>
-        let n1 = new Trading();
-        console.log(n1);
+        const tradingParams = {
+            date: new Date(),
+            price: 5,
+            quantity: 20
+        }
+        let n1 = new Trading(tradingParams);
+        let amount = n1.amount;
+        console.log(n1.date);
+        console.log(n1.price);
+        console.log(amount)
     </script>
 </body>
 </html>
